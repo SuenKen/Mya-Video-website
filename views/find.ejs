@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<title>米亞MYA【香港VTuber】</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+
+
+    <!-- open graph -->
+    <!-- Informations -->
+      <meta property="og:description" content="呢個係秋玥我喺冇米亞直播嘅日子寫出嚟嘅整合網站,入面應該包含曬大部分烤肉/相關影片,新嘅烤肉/相關影片都會自動更新(約每小時更新一次),不過可能會有DELAY" />
+      <meta property="og:title" content="米亞MYA【香港VTuber】影片整合網站" />
+      <meta property="og:type"  content="website" />
+      <meta property="og:url"   content="https://mya.autumnyue999.repl.co/" />
+    <!-- Image -->
+      <meta property="og:image" content="https://yt3.ggpht.com/ytc/AAUvwnhCFeY22-ljL2kj7j2L9v4ejxXXWbD18HZHIzAKPQ=s176-c-k-c0x00ffffff-no-rj" />
+      <meta property="og:image:alt"    content="https://yt3.ggpht.com/ytc/AAUvwnhCFeY22-ljL2kj7j2L9v4ejxXXWbD18HZHIzAKPQ=s176-c-k-c0x00ffffff-no-rj" />
+      <meta property="og:image:height" content="80" />
+      <meta property="og:image:secure_url" content="https://yt3.ggpht.com/ytc/AAUvwnhCFeY22-ljL2kj7j2L9v4ejxXXWbD18HZHIzAKPQ=s176-c-k-c0x00ffffff-no-rj" />
+      <meta property="og:image:type"  content="image/jpeg" />
+      <meta property="og:image:width" content="80" />
+      <meta property="og:locale" content="en_GB" />
+  <link rel="icon" href="https://yt3.ggpht.com/ytc/AAUvwnhCFeY22-ljL2kj7j2L9v4ejxXXWbD18HZHIzAKPQ=s176-c-k-c0x00ffffff-no-rj">
+  </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<body>
+
+<!-- Navbar (sit on top) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   
+    <a class="navbar-brand" href="/">
+      <img src="https://yt3.ggpht.com/ytc/AAUvwnhCFeY22-ljL2kj7j2L9v4ejxXXWbD18HZHIzAKPQ=s176-c-k-c0x00ffffff-no-rj" width="30" height="30" class="d-inline-block align-top" alt="">
+      <span class="h3 mx-1">米亞MYA【香港VTuber】</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="/">首頁</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/info">簡介</a>
+        </li>
+          <li class="nav-item active">
+          <a class="nav-link" href="/edit">烤肉/相關影片</a>
+        </li>
+        <!-- .dropdown Navbar選項使用下拉式選單 -->
+        <li class="nav-item ">
+          <a class="nav-link" href="/video">影片/直播</a>
+        </li>
+      </ul>
+
+    </div>
+    
+  </nav>
+
+
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">刪除影片-烤肉/相關影片(<%=docs.length%>)</h3>
+          <button class="w3-button w3-aqua  w3-block" onclick="location.href = '/find2';" style="width: 50%;">＜按此返回影片/直播></button>
+    
+   <table>
+    <tr><th>URL ID</th><th>Title</th><th>Button</th></tr>
+      <% for (var doc of docs) {%>
+      <tr><td><%=doc.url%></td><td><%=doc.title%></td><td><button onclick="location.href = '/del2?_id=<%=doc._id%>';">刪除影片</button></td></tr>
+
+     <% }%>
+     </table>
+
+
+  </div>
+
+</body>
+</html>

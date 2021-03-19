@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<title>米亞MYA【香港VTuber】</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<% if(docs.length < 30){ %>
+<meta http-equiv="refresh" content="3;url=/video" />
+<% }%>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+
+
+    <!-- open graph -->
+    <!-- Informations -->
+      <meta property="og:description" content="呢個係秋玥我喺冇米亞直播嘅日子寫出嚟嘅整合網站,入面應該包含曬大部分烤肉/相關影片,新嘅烤肉/相關影片都會自動更新(約每小時更新一次),不過可能會有DELAY" />
+      <meta property="og:title" content="米亞MYA【香港VTuber】影片整合網站" />
+      <meta property="og:type"  content="website" />
+      <meta property="og:url"   content="https://mya.autumnyue999.repl.co/" />
+    <!-- Image -->
+      <meta property="og:image" content="https://yt3.ggpht.com/ytc/AAUvwnhCFeY22-ljL2kj7j2L9v4ejxXXWbD18HZHIzAKPQ=s176-c-k-c0x00ffffff-no-rj" />
+      <meta property="og:image:alt"    content="https://yt3.ggpht.com/ytc/AAUvwnhCFeY22-ljL2kj7j2L9v4ejxXXWbD18HZHIzAKPQ=s176-c-k-c0x00ffffff-no-rj" />
+      <meta property="og:image:height" content="80" />
+      <meta property="og:image:secure_url" content="https://yt3.ggpht.com/ytc/AAUvwnhCFeY22-ljL2kj7j2L9v4ejxXXWbD18HZHIzAKPQ=s176-c-k-c0x00ffffff-no-rj" />
+      <meta property="og:image:type"  content="image/jpeg" />
+      <meta property="og:image:width" content="80" />
+      <meta property="og:locale" content="en_GB" />
+  <link rel="icon" href="https://yt3.ggpht.com/ytc/AAUvwnhCFeY22-ljL2kj7j2L9v4ejxXXWbD18HZHIzAKPQ=s176-c-k-c0x00ffffff-no-rj">
+  </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<body>
+
+<!-- Navbar (sit on top) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   
+    <a class="navbar-brand" href="/">
+      <img src="https://yt3.ggpht.com/ytc/AAUvwnhCFeY22-ljL2kj7j2L9v4ejxXXWbD18HZHIzAKPQ=s176-c-k-c0x00ffffff-no-rj" width="30" height="30" class="d-inline-block align-top" alt="">
+      <span class="h3 mx-1">米亞MYA【香港VTuber】</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="/">首頁</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/info">簡介</a>
+        </li>
+          <li class="nav-item ">
+          <a class="nav-link" href="/edit">烤肉/相關影片</a>
+        </li>
+        <!-- .dropdown Navbar選項使用下拉式選單 -->
+        <li class="nav-item active">
+          <a class="nav-link" href="/video">影片/直播</a>
+        </li>
+      </ul>
+
+    </div>
+    
+  </nav>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">影片/直播(<%=docs.length%>)（約每小時自動更新一次）</h3>
+    <p>
+    </p>
+  </div>
+
+   <div class="w3-row-padding w3">
+
+  <% 
+  for (var doc of docs) {%>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+
+<a href="https://www.youtube.com/watch?v=<%=doc.url%>" target="_blank">
+      <img src="<%=doc.photo%>" style="width:100%"></a>
+      <h5 style="   white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;"><%=doc.title%></h5>
+
+      <p><button class="w3-button w3-light-grey w3-block" onclick="window.open('https://www.youtube.com/watch?v=<%=doc.url%>', '_blank');
+">＜按此進入Youtube連結＞</button></p>
+    </div>
+
+    <% }%>  
+
+           </div>
+
+  </div>
+</div>
+
+</body>
+</html>
