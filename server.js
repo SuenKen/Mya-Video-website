@@ -817,7 +817,7 @@ const handle_Del = (res, criteria,req) => {
 const getDescription = (uid) => {
 
   var description ;
-   request('https://www.googleapis.com/youtube/v3/videos?id='+uid+'&part=snippet&key=AIzaSyA_5LpCYpuBYpUlSLboCqZ5FBYi7Fc0oCY', { json: true }, (err, res, body) => {
+   request('https://www.googleapis.com/youtube/v3/videos?id='+uid+'&part=snippet&key=', { json: true }, (err, res, body) => {
     if (err) { return console.log(err); }
     //console.log(body.items[0].snippet.description);
     j1 = body;
